@@ -1,0 +1,201 @@
+/* ==========================================
+   ESTILOS GENERALES Y PALETA DE COLORES
+   ========================================== */
+:root {
+    --bg-main: #eef2f9;           /* Fondo suave pastel */
+    --card-bg: #ffffff;           /* Fondo blanco para tarjetas */
+    --primary-blue: #1e293b;       /* Azul marino profundo */
+    --accent-blue: #4f46e5;        /* Azul violeta vibrante */
+    --accent-light: #e0e7ff;       /* Azul pastel suave */
+    --emerald-green: #10b981;     /* Verde esmeralda */
+    --lime-green: #84cc16;        /* Verde limón */
+    --text-dark: #334155;        /* Texto principal */
+    --text-muted: #64748b;       /* Texto secundario */
+    --radius-lg: 24px;            /* Curvatura grande estilo UI Anime */
+    --radius-md: 16px;
+    --shadow-soft: 0 10px 25px -5px rgba(30, 41, 59, 0.08), 0 8px 10px -6px rgba(30, 41, 59, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ==========================================
+   BANNER PRINCIPAL (HERO BANNER)
+   ========================================== */
+.hero-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #312e81 60%, #4338ca 100%);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 30px -10px rgba(30, 41, 59, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalles decorativos en el banner */
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(132, 204, 22, 0.25) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+
+.badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #e0e7ff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.hero-banner h2 {
+    font-size: 1.2rem;
+    color: #a5b4fc;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-banner .quote {
+    font-size: 1rem;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--lime-green);
+    padding: 12px 18px;
+    border-radius: 0 12px 12px 0;
+    color: #f1f5f9;
+}
+
+/* ==========================================
+   ESTILO DE TARJETAS (CARDS)
+   ========================================== */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.card h3 {
+    color: var(--primary-blue);
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Sección Sobre Mí */
+.about-section p {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   GRID DE DOS COLUMNAS
+   ========================================== */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-banner {
+        padding: 25px;
+    }
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Tarjeta Pasatiempos */
+.intro-p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+.hobby-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: var(--bg-main);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+}
+
+.hobby-item:last-child {
+    margin-bottom: 0;
+}
+
+.hobby-item .icon {
+    font-size: 1.3rem;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* Tarjeta Visión Professional */
+.vision-card p {
+    margin-bottom: 14px;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-left: 4px solid var(--emerald-green);
+    padding: 14px;
+    border-radius: 12px;
+    color: #065f46;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 15px;
+}

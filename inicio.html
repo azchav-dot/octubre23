@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda y Showcase de Sábados</title>
+    <link rel="stylesheet" href="css/calendario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-wrapper">
+        
+        <!-- 1. GRILLA DEL CALENDARIO -->
+        <main class="schedule-container">
+
+            <!-- JULIO -->
+            <section class="month-block">
+                <div class="month-header">julio</div>
+
+                <div class="days-container">
+                    <!-- Sábado 18 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-18', this)">18</button>
+                        <div class="info-card">
+                            <h3>Sábado 18</h3>
+                            <p>Información, notas o actividades programadas para este día.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sábado 25 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-25', this)">25</button>
+                        <div class="info-card">
+                            <h3>Sábado 25</h3>
+                            <p>Análisis, investigación e imágenes de la fecha.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AGOSTO -->
+            <section class="month-block">
+                <div class="month-header">agosto</div>
+
+                <div class="days-container">
+                    <!-- Sábado 01 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-01', this)">01</button>
+                        <div class="info-card">
+                            <h3>Sábado 01</h3>
+                            <p>Detalles o entregas del día.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEPTIEMBRE -->
+            <section class="month-block">
+                <div class="month-header">septiembre</div>
+
+                <div class="days-container">
+                    <!-- Viernes 04 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-sep-04', this)">04</button>
+                        <div class="info-card">
+                            <h3>Viernes 04</h3>
+                            <p>Detalles o actividades de la primera semana.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 11 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-sep-11', this)">11</button>
+                        <div class="info-card">
+                            <h3>Viernes 11</h3>
+                            <p>Avances y entregas programadas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 18 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-sep-18', this)">18</button>
+                        <div class="info-card">
+                            <h3>Viernes 18</h3>
+                            <p>Revisiones y seguimiento del proyecto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 25 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-sep-25', this)">25</button>
+                        <div class="info-card">
+                            <h3>Viernes 25</h3>
+                            <p>Cierre y conclusiones del mes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OCTUBRE -->
+            <section class="month-block">
+                <div class="month-header">octubre</div>
+
+                <div class="days-container">
+                    <!-- Viernes 09 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-oct-09', this)">09</button>
+                        <div class="info-card">
+                            <h3>Viernes 09</h3>
+                            <p>Avances y revisiones programadas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 16 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-oct-16', this)">16</button>
+                        <div class="info-card">
+                            <h3>Viernes 16</h3>
+                            <p>Seguimiento y desarrollo del proyecto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 23 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-oct-23', this)">23</button>
+                        <div class="info-card">
+                            <h3>Viernes 23</h3>
+                            <p>Entrega de contenidos y bitácora.</p>
+                        </div>
+                    </div>
+
+                    <!-- Viernes 30 -->
+                    <div class="day-group">
+                        <button class="day-badge" onclick="mostrarDetalle('detalle-oct-30', this)">30</button>
+                        <div class="info-card">
+                            <h3>Viernes 30</h3>
+                            <p>Cierre y conclusiones del mes de octubre.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <hr class="section-divider">
+
+        <!-- 2. CONTENEDOR DINÁMICO DE INFORMACIÓN (SHOWCASE) -->
+        <div class="showcase-wrapper">
+            
+            <!-- CONTROLES GLOBALES DEL PANEL -->
+            <div id="panel-controls" class="panel-controls hidden">
+                <button class="btn-cerrar" onclick="ocultarDetalles()">✕ Ocultar información</button>
+            </div>
+
+            <!-- DETALLE SÁBADO 18 (JULIO) -->
+            <section id="detalle-18" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header">
+                    <span class="tag">Análisis del día</span>
+                    <h2>¿Que es la infografia?</h2>
+                    <p>Una infografía es una representación visual de información, datos o conocimientos diseñada para transmitir un mensaje complejo de forma rápida, clara y atractiva. Combina elementos gráficos (como ilustraciones, iconos, gráficos y diagramas) con texto sintético.</p>
+                    <p>Jerarquía clara: Utiliza tamaños de letra, colores y distribución espacial para guiar la lectura de forma natural.</p>
+                    <p>Fácil comprensión: Permite procesar la información de un vistazo sin necesidad de lecturas extensas.</p>
+                </header>
+
+                <div class="block-row">
+                    <div class="block-text">
+                        <h3>Características principales</h3>
+                        <p>Síntesis visual. Resume grandes volúmenes de texto o datos complejos en una sola imagen estructurada.</p>
+                        <p>una jerarquía clara. Utiliza tamaños de letra, colores y distribución espacial para guiar la lectura de forma natural.</p>
+                        <p>La fácilidad en la comprensión. Permite procesar la información de un vistazo sin necesidad de lecturas extensas.</p>
+                    </div>
+                    <div class="block-media">
+                        <img src="imagenes/uno.jpg" alt="Info Gráfica 1">
+                    </div>
+                </div>
+
+                <div class="block-row reverse">
+                    <div class="block-text">
+                        <h3>La funcionalidad y la estrategia</h3>
+                        <p>Las infografías se han consolidado como un recurso fundamental dentro del diseño y la comunicación visual moderna, transformando la forma en que consumimos información. Al combinar elementos gráficos, tipografía clara e ilustraciones sintéticas, permiten presentar datos complejos, estadísticas o conceptos extensos de manera visualmente atractiva, fluida y accesible.</p>
+                        <p>Su principal fortaleza radica en la capacidad de simplificar el mensaje sin restarle profundidad ni precisión. Esta síntesis visual facilita una asimilación más rápida y perdurable, lo que convierte a la infografía en un formato sumamente versátil para audiencias de distintas edades, desde niños en etapas educativas hasta profesionales que buscan análisis concisos. En un entorno digital donde el tiempo de atención es limitado, estructurar el contenido a través de jerarquías visuales garantiza que la transmisión de ideas sea mucho más directa, dinámica y comprensible.</p>
+                    </div>
+                    <div class="block-media">
+                        <img src="imagenes/dos.jpg" alt="Info Gráfica 2">
+                    </div>
+                </div>
+
+                <div class="block-full">
+                    <h3>MEDIA & EVIDENCIAS</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <img src="imagenes/info1.jpeg" alt="Info 1">
+                            <h4>Muestra 01</h4>
+                            <p>Notas técnicas copiables sobre este entregable.</p>
+                        </div>
+                        <div class="card">
+                            <img src="imagenes/info2.jpeg" alt="Info 2">
+                            <h4>Muestra 02</h4>
+                            <p>Observaciones de diagramación y color.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui-container">
+                    <header class="card main-header">
+                      <div class="card-top-tab">Get Started</div>
+                      <button class="btn-icon add-btn">+</button>
+                      <span class="subtitle">INTRO TO VOLCANOES / EARTH SCIENCE</span>
+                      
+                      <div class="header-body">
+                        <h1 class="main-title">VOLCANOES <span>EARTH SCIENCE</span></h1>
+                        
+                        <div class="inner-card">
+                          <h2>What is a volcano?</h2>
+                          <p>A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface.</p>
+                          <button class="btn-arrow">→</button>
+                        </div>
+                      </div>
+
+                      <div class="header-footer">
+                        <button class="btn-action">LOGOUT</button>
+                        <button class="btn-action highlight">Exampele</button>
+                        <div class="icon-group">
+                          <span class="circle-icon">♥</span>
+                          <span class="circle-icon">♥</span>
+                        </div>
+                      </div>
+                    </header>
+
+                    <div class="badge-tab">INFO ▼</div>
+
+                    <section class="card content-card">
+                      <div class="card-left">
+                        <span class="badge">DIFFERENCE</span>
+                        <p>Berbeda dengan volcanoes. Srum that seemly murge-shaped volcanoet performally voleatr adolamscan, itnib quarts...</p>
+                        <a href="#" class="link-more">Example volcanoes ›</a>
+                      </div>
+
+                      <div class="inner-card float-right">
+                        <h2>Cone</h2>
+                        <p>Cone shaped volcanoe, usually aften ano scapt. Shiialcattern, an example of Sunset Crater Volcano in Arizona.</p>
+                        <a href="#" class="link-more">Example volcanoes ›</a>
+                        <button class="btn-arrow">→</button>
+                      </div>
+
+                      <div class="card-bottom-tab">NEXT</div>
+                    </section>
+
+                    <section class="gallery-row">
+                      <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Volcán">
+                        <button class="btn-arrow floating">→</button>
+                      </div>
+                      <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Volcán">
+                        <button class="btn-arrow floating">→</button>
+                      </div>
+                      <div class="side-controls">
+                        <button class="pill-btn">PAGE</button>
+                        <button class="pill-btn active">GALLERY</button>
+                        <button class="pill-btn">SCROLL ▲</button>
+                      </div>
+                    </section>
+
+                    <section class="card grid-card">
+                      <div class="tabs-header">
+                        <span class="circle-logo">ORL</span>
+                        <div class="tab-options">
+                          <span class="tab active">Its Type Variation</span>
+                          <span class="tab">Volcano</span>
+                          <span class="tab">Cone</span>
+                        </div>
+                      </div>
+
+                      <div class="cards-grid">
+                        <div class="media-card small">
+                          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Variación">
+                          <button class="btn-arrow floating">→</button>
+                        </div>
+                        <div class="media-card small">
+                          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Variación">
+                          <button class="btn-arrow floating">→</button>
+                        </div>
+                        <div class="media-card small">
+                          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Variación">
+                          <button class="btn-arrow floating">→</button>
+                        </div>
+                      </div>
+                    </section>
+
+                    <footer class="bottom-nav">
+                      <span>SPECIAL COLLABORATION</span>
+                      <div class="home-icon">⌂</div>
+                      <span>ABOUT VOLCANOES</span>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- DETALLE SÁBADO 25 (JULIO) -->
+            <section id="detalle-25" class="showcase-container theme-gravity showcase-content hidden">
+                <div class="gravity-hero">
+                    <h1 class="glitch-title">Visualizacion de datos</h1>
+                    <p class="date-badge">La visualización de datos es la representación gráfica de información para comunicarla de forma clara, directa y efectiva. A través de elementos como gráficos, infografías, diagramas o mapas, este campo une el arte y la ciencia para lograr un equilibrio fundamental: crear piezas atractivas a la vista, pero sobre todo funcionales para facilitar la comprensión del lector.</p>
+                </div>
+
+                <div class="editorial-layout">
+                    <article class="editorial-box highlight">
+                        <h2>¿para que se utilizaria la visualizacion de datos?</h2>
+                        <p>Toma de decisiones estratégicas. Permite a empresas y organizaciones identificar tendencias, patrones o caídas en ventas para actuar con rapidez.</p>
+                        <p>Presentación de informes y resultados: Facilita la exposición de datos complejos ante clientes, directivos o equipos sin saturarlos con tablas densas.</p>
+                        <p>Monitoreo en tiempo real: Se emplea en dashboards o tableros de control para vigilar métricas clave, como el tráfico de un sitio web o el rendimiento financiero.</p>
+                        <p>Funciona tambien para respaldar la información, para corroborarala y para que se sienta mas solida</p>
+                    </article>
+
+                    <div class="editorial-media angled-frame">
+                        <img src="imagenes/datos.jpg" alt="Vista previa 25">
+                    </div>
+                </div>
+
+                <div class="editorial-columns">
+                    <div class="column">
+                        <h2>¿Para que se utiliza la visualización de datos?</h2>
+                        <h3>Identificar patrones y tendencias</h3>
+                        <p>Revela comportamientos a lo largo del tiempo (como el crecimiento de ventas o variaciones del clima) que resultan difíciles de detectar en una hoja de cálculo.</p>
+                        <h3>Realizar comparaciones directas</h3>
+                        <p>Permite contrastar volúmenes, porcentajes o métricas entre diferentes categorías, productos o periodos.</p>
+                        <h3>Narración de historias con datos (Data Storytelling)</h3>
+                        <p>Guía al lector paso a paso a través de un hilo conductor visual para respaldar una hipótesis, un artículo editorial o una propuesta conceptual.</p>
+                        <ul>
+                            <li>Simplificar la distribución geográfica</li>
+                            <li>Detectar anomalías u errores</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="quote-card">
+                            <blockquote>"El dilema ético y narrativo: Un mismo conjunto de datos puede contar historias radicalmente opuestas según cómo se diseñe (los ejes utilizados, la escala o el uso del color). Por eso, el diseñador no solo comunica, sino que moldea la percepción de la realidad.</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DETALLE SÁBADO 01 (AGOSTO) -->
+            <section id="detalle-01" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header">
+                    <span class="tag">Bitácora de Agosto</span>
+                    <h2>BITÁCORA DE AGOSTO — FASE DE BOCETOS</h2>
+                    <p class="subtitle">
+                        Dueño del constante avance tecnológico y a la evolución en los medios de comunicación, el consumo de información ha cambiado drásticamente. Hoy en día, el público muestra menos interés por textos densos, priorizando contenidos breves y directos.
+                    </p>
+                </header>
+
+                <div class="hero-section">
+                    <div class="hero-text">
+                        <h3>La atención visual</h3>
+                        <p>Esta transformación tiene tanto aspectos positivos como negativos. Por un lado, puede representar una desventaja al reducir la capacidad de análisis. Por otro lado, el uso de lo visual ha demostrado ser una alternativa creativa y entretenida para el aprendizaje.</p>
+                        <p>Hoy en día es muy común aprender a través de ciertos programas. Un ejemplo claro que he vivido de primera mano es el anime <em>Dr. Stone</em>. La historia gira en torno a un protagonista que debe recurrir a la ciencia para reconstruir la civilización tras una petrificación masiva que duró 3700 años. A lo largo de los capítulos, aprendí más sobre conceptos científicos que en mis años de escuela.</p>
+                        <p>El anime explica de forma accesible el uso de componentes como el sulfato de sodio o el carbonato de calcio, abarcando desde la elaboración de algo tan cotidiano como el jabón hasta la construcción de un cohete espacial.</p>
+                    </div>
+
+                    <div class="hero-banner">
+                        <img src="imagenes/dr.stone.jpg" alt="Fondo Dr Stone" class="bg-img">
+                        <img src="imagenes/ciencia.jpg" alt="Senku niño" class="floating-img img-1">
+                        <img src="imagenes/foco.jpg" alt="Manga Senku" class="floating-img img-2">
+                        <img src="imagenes/tanque.jpg" alt="Tanque Senku" class="floating-img img-3">
+                        <img src="imagenes/telefono.jpg" alt="Aldea Senku" class="floating-img img-4">
+                    </div>
+                </div>
+
+                <div class="info-card showcase-container" style="margin-top: 24px; position: relative;">
+                    <h2>¿CÓMO FUNCIONA LA BOCETERÍA EN LA INFOGRAFÍA?</h2>
+                    
+                    <div class="editorial-columns" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px;">
+                        <div class="column">
+                            <h3 style="position: static;">¿Qué es un boceto?</h3>
+                            <p style="position: static;">Un boceto es un borrador primario que puede ser un dibujo o una idea; el propósito es crear una composición a base de líneas no perfectas o no tan definidas. Su función es desarrollar formas, composiciones, ideas y conceptos para proyectar lo que el creador quiere elaborar y transmitir.</p>
+                        </div>
+                        
+                        <div class="column">
+                            <h3 style="position: static;">Propósito y utilidad</h3>
+                            <p style="position: static;">Su propósito principal es explorar ideas, descubrir composiciones, resolver problemáticas visuales y planificar el diseño. Se realiza a mano alzada como un proceso de exploración.</p>
+                            <p style="position: static;">En la infografía, la bocetería ordena los elementos en el espacio. Funciona como un mapa mental y visual que evita pérdidas de tiempo durante el proceso digital, permitiendo ajustar la jerarquía visual antes de tomar decisiones definitivas.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 24px; width: 100%;">
+                        <div style="flex: 1;">
+                            <img src="imagenes/boceteria.jpg" alt="Boceto pollo" style="width: 100%; border-radius: 5px; display: block;">
+                        </div>
+                        <div style="flex: 1;">
+                            <img src="imagenes/boceteria1.jpg" alt="Infografía planeta" style="width: 100%; border-radius: 5px; display: block;">
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="margin: 32px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+                <div class="full-width-section" style="display: block; width: 100%; position: static;">
+                    <h3 style="position: static;">¿como funciona la boceteria?</h3>
+                    <p style="position: static;">La bocetería es fundamental en el diseño de infografías porque permite estructurar la jerarquía visual y el flujo de lectura de forma rápida y económica antes de pasar al software digital, facilitando la síntesis de datos complejos en recursos visuales sencillos, la exploración de múltiples diagramas y la validación temprana de ideas con clientes o colaboradores sin malgastar tiempo de producción.</p>
+                    <p style="position: static;">Ayuda aclarar la informacion y las ideas. Fuerza a traducir conceptos extensos o datos numéricos en recursos visuales simples (gráficos, iconos, mapas, ilustraciones) antes de definir el estilo final.</p>
+                    <p style="position: static;">Ayuda a el horro del tiempo y los recursos. Es mucho más rápido corregir, cambiar o descartar una idea en papel con un lápiz que rehacer elementos complejos en Illustrator, Figma o Photoshop.</p>
+                </div>
+            </section>
+
+            <!-- DETALLE VIERNES 04 (SEPTIEMBRE) -->
+            <section id="detalle-sep-04" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header">
+                    <span class="tag">sabado 04 de Septiembre</span>
+                    <h2>La narrativa de la información y las 5W + 1H</h2>
+                    <p class="subtitle">Primera bitacora de Septiembre.</p>
+                </header>
+                <div class="block-row">
+                    <div class="block-text">
+                        <h3>¿Que se comprende con la información visual</h3>
+                        <p>Es una Forma visual equilibrada que incluye informacion narrativa y elementos grafcos que pueden ser graficas, iconos, imagenes o elementos vectoriales entre otros. esto busca organizar y conectar con el receptor. Esto nos enseña que hay maneras de dar informacion que sea atractiva para otros ya que algunos les cuesta llevar el conteo de los libros o leer o incluso buscar información por lo que esgo ayuda a ese grupo de personas incluso no solo para ellos las personas que tienen una actitud lectora les puede ayudar a retroalimentar o a entender más información. </p>
+                    </div>
+                </div>
+                <div class="block-row">
+                    <div class="block-text">
+                        <p>Algo que e reconocido es que lo que se presente en uaninfografia es neutro pero, ¿porque? nosotros al hacer una tenemos acceso a mucha información y cada cerebro es diferente y sera asi segun como queremos que sea la infmormacion que se presentara, veremos muchos hechos, datos. Incluso si somos un grupo de 10 personas y nos dan un tema como "la investigación de la paloma" todos tenemos el mismo tema pero cada quien tomara que punto que destacar, que direccion tomara y mas para llamar la atencion de publico, por ejemplo una persona puede poner eleguir la historia de la paloma, como contribuyo esa ave para el mundo que fueron las mejores mensajeras o que es una de las pocas avez que da leche a los polluelos. si se ve aqui hay puntos diferenstes y asi funciona la infografia uno no sabe que dirección tomará</p>
+                    </div>
+                </div>
+
+                <div class="bloque-apartado-morado">
+                    <div class="subtitulo-ancho">
+                        <h2>Los Puntos de Vista del Narrador en la Narrativa</h2>
+                    </div>
+
+                    <div class="filas-creativas">
+                        <div class="tarjeta-irregular">
+                            <h3>Primera persona (Yo)</h3>
+                            <p>Escribe aquí el contenido o información del primer cuadro.</p>
+                        </div>
+
+                        <div class="tarjeta-irregular">
+                            <h3>Tercera persona limitada</h3>
+                            <p>Un narrador relata desde la perspectiva de un solo personaje, con conocimiento limitado de lo que ocurre con los demás.</p>
+                        </div>
+
+                        <div class="tarjeta-irregular">
+                            <h3>Tercera persona omnisciente</h3>
+                            <p>El narrador tiene conocimiento total y relata lo que cualquier personaje piensa o hace.</p>
+                        </div>
+                    </div>
+
+                    <div class="estilo-scrapbook-container">
+                        <div class="tarjeta-scrap tarjeta-vino pin-superior col-span-1">
+                            <p>A través de infografías e ilustraciones, se argumenta que la infografía combina texto y elementos gráficos para responder a las preguntas periodísticas básicas y situar al lector en un contexto claro. Con tal de ofrecerle al lector una mejor comprensión.</p>
+                        </div>
+
+                        <div class="titulo-flotante col-span-1">
+                            <h1>PREGUNTAS DEL<br>PERIODISMO</h1>
+                            <span class="etiqueta-pill">como modelo</span>
+                        </div>
+
+                        <div class="tarjeta-scrap tarjeta-verde efecto-esquina col-span-1">
+                            <div class="encabezado-tarjeta">
+                                <h3>Ampliación del Modelo: Las 5W + 2H / 5W + 1H</h3>
+                                <div class="linea-punteada"></div>
+                            </div>
+                            <p>¿Cómo? (How): La manera o proceso en que se llevan a cabo los hechos (base de la estrategia de comunicación).</p>
+                            <p><br>¿Cuánto? (How much): La medición, costos o aspectos cuantitativos.</p>
+                            <p><br>¿Para qué?: El propósito o finalidad que persigue la información.</p>
+                        </div>
+
+                        <div class="tarjeta-scrap caja-imagen marco-verde col-span-1">
+                            <p>¿Qué? (What): El suceso, problema, producto o mensaje central.</p>
+                            <p><br>¿Quién? (Who): Los involucrados, el público objetivo o quién emite el mensaje.</p>
+                            <p><br>¿Cuándo? (When): La fecha, hora o momento temporal en que ocurren los hechos.</p>
+                            <p><br>¿Dónde? (Where): La ubicación geográfica o el contexto específico del problema.</p>
+                            <p><br>¿Por qué? (Why): La razón, causa o desencadenante que profundiza en la situación.</p>
+                        </div>
+
+                        <div class="tarjeta-scrap tarjeta-verde col-span-1">
+                            <h2>Analisis</h2>
+                            <p>Al momento de estar analizando esas preguntas y su función Me he dado cuenta de que la estructura garantiza una información más completa. Funciona como un filtro por donde pasa el contenido para asegurar que el mensaje o el diseño no deje cabos sueltos y resulte más concreto.<br>Posee una organización clara. Tiene el poder de estructurar la información, lo que permite priorizar cuál debería ser el título, los subtítulos para complementar la propuesta y qué elementos visuales la acompañarán.
+
+    El punto de todo esto es que responda a una función: comunicar y dar información, no solo para que digan "¡oh, qué bonito!".</p>
+                        </div>
+
+                        <div class="tarjeta-scrap tarjeta-vino col-span-1">
+                            <h3>Para transmitir un mensaje de forma efectiva ¿como se define?</h3>
+                            <p>¿Qué quiero decir?</p>
+                            <p><br>¿A quién se lo voy a decir?</p>
+                            <p><br>¿Qué sabe mi público del tema?</p>
+                            <p><br>¿Cuánto tiempo tengo para decirlo?</p>
+                            <p><br>¿Cómo sé si me hice entender?</p>
+                        </div>
+
+                        <div class="tarjeta-scrap caja-imagen marco-vino col-span-1">
+                            <img src="imagenes/donde.jpeg" alt="Foto descriptiva 2">
+                        </div>
+
+                        <div class="tarjeta-scrap caja-imagen marco-verde col-span-1">
+                            <h2><br>Lo que ahora debo considerar</h2>
+                            <p>El diseño Claro que importa pero, la forma en la que se imparte la información es lo mas importante una imagen o una ilustracion si puede llma r la atención pero, la informacion hace que s equede, que sienta mas curiosidad, que aprenda algo. Ese es el oro en de la mina porque hicmos que se quedara a impartir la informacion que si intereso y que la infografia a nivel textual funciona.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DETALLE VIERNES 11 (SEPTIEMBRE) -->
+            <section id="detalle-sep-11" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header header-sep11">
+                    <span class="tag-sep11">Viernes 11 de Septiembre</span>
+                    <h2>La comunicación verbal, narrativa</h2>
+                    <p class="subtitle">Bitácora de exploración visual y infografica</p>
+                </header>
+
+                <div class="bloque-sep11-wrapper">
+                    <div class="navbar-sep11">
+                        <div class="pills-nav-sep11">
+                            <span class="btn-pill-sep11 pill-tomato">HOME</span>
+                            <span class="btn-pill-sep11 pill-honeydew">PROFILE</span>
+                            <span class="btn-pill-sep11 pill-honeydew">GALLERY</span>
+                            <span class="btn-pill-sep11 pill-honeydew">INTERESTS</span>
+                            <span class="btn-pill-sep11 pill-honeydew">CONTACTS</span>
+                        </div>
+                        <div class="search-sep11">
+                            <span>🔍 ¿Que es la comunicación verbal?</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-card-sep11">
+                        <div class="avatar-frame-sep11">
+                            <img src="imagenes/leng.jpe" alt="Foto de perfil grande" class="img-avatar-sep11">
+                        </div>
+                        <div class="hero-info-sep11">
+                            <h1>¿Que es la comunicación?</h1>
+                            <p class="handle-sep11">La comunicación como sabemos es el medio por lo que se trasmite información. por ella se pueden intercambiar sentimientos, emociones, opiniones entre otros mas. Pero hay algo interesante es que la informacion se puede clasificar en dos formas.</p>
+                            <div class="badges-flex-sep11">
+                                <span class="badge-sep11 bg-peach">comunicación Verbal</span>
+                                <span class="badge-sep11 bg-sky">comunicación No Verbal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-dos-columnas static-pos">
+                        <div class="columna-sep11">
+                            <div class="card-sep11 bg-honeydew">
+                                <div class="card-header-sep11">
+                                    <span class="chip-sep11 chip-tomato">comunicación</span>
+                                    <span class="chip-sep11 chip-peach">07.03</span>
+                                </div>
+                                <h3>Escrita</h3>
+                                <p>Esta comunicación se establece en la escritura a travez de palabras, codigos o imagenes.Un ejemplo son ñas palabras, imagenes, fotografias, graficos, codigo morse. entre otros. </p>
+                                <div class="pills-flex-sep11">
+                                    <span class="pill-outline-sep11">Una funciona para leer en el papel</span>
+                                    <span class="pill-outline-sep11">La otra funciona para leer lo facial</span>
+                                </div>
+                            </div>
+
+                            <div class="card-sep11 bg-tomato text-white">
+                                <div class="title-bar-sep11">
+                                    <h3>Gallery</h3>
+                                    <span class="dots-sep11">• • •</span>
+                                </div>
+                                <div class="contenedor-img-mediana-sep11">
+                                    <img src="imagenes/gestos.jpe" alt="Galería mediana" class="img-mediana-sep11">
+                                </div>
+                            </div>
+
+                            <div class="card-sep11 bg-coral text-white">
+                                <p class="quote-sep11">"Algo que se puede debe aprender es que en la infografia no es solo texto, es mas que eso hay otras maneras de compartir informacion o de expresarla por medio del papel o digital. Una de ella es la fotografia, los graficos, iconos entre otros."</p>
+                            </div>
+                        </div>
+
+                        <div class="columna-sep11">
+                            <div class="card-sep11 bg-coral text-white">
+                                <div class="title-bar-sep11">
+                                    <h3>comunicación no verbal</h3>
+                                    <span class="dots-sep11">• • •</span>
+                                </div>
+                                <div class="row-mini-profile-sep11">
+                                    <div class="avatar-mini-frame-sep11">
+                                        <img src="imagenes/Maomao.jpg" alt="Detalle pequeño" class="img-mini-sep11">
+                                    </div>
+                                    <p class="text-mini-sep11">En esta comunicación no se usan palabras como tal, si no es el lenguaje por medio de gestos, miradas, posturas, lenguaje corporal. Que ejemplo puede ser cruzar barzos, guiñar un ojo, hacer un puchero. Entre otros. </p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep11 bg-peach">
+                                <div class="title-bar-sep11">
+                                    <h3>Storytelling</h3>
+                                    <span class="dots-sep11">• • •</span>
+                                </div>
+                                <p>Un Storytellinges un arte de contar historias para asi conectar con la audiencia, transmitir un concepto y aprendizaje. Esto consiste en tomar información aburrida, compleja para hacerla atractiva, que sea de aprendizaje y que entretenga.</p>
+
+                                <div class="thumbs-grid-sep11">
+                                    <div class="thumb-box-sep11">
+                                        <img src="imagenes/noragami.jpe" alt="Miniatura 1">
+                                    </div>
+                                    <div class="thumb-box-sep11">
+                                        <img src="imagenes/batman.jpe" alt="Miniatura 2">
+                                    </div>
+                                    <div class="thumb-box-sep11">
+                                        <img src="imagenes/manga.jpe" alt="Miniatura 3">
+                                    </div>
+                                </div>
+
+                                <div class="pills-flex-sep11">
+                                    <p>En una infografias con el Storytelling tiene tres elementos.</p>
+                                    <span class="badge-sep11 bg-sky">Datos</span>
+                                    <span class="badge-sep11 bg-honeydew">Narrativa</span>
+                                    <span class="badge-sep11 bg-sky">visualización</span>
+                                    <p>Información precisa y analizada.</p>
+                                    <p>Debe ser un relato que guie al lector</p>
+                                    <p>Pueden ser graficos, colores, imagenes</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep11 bg-sky">
+                                <div class="title-bar-sep11">
+                                    <h3>Analisis</h3>
+                                    <span class="dots-sep11">• • •</span>
+                                </div>
+                                <p>Algo que aprendi y que debo recordar es que una infografian se puede leer de diferentes formas, mi persona esta muy acostumbrada de leer de izquierda a derecha o al revez pero, muchas veces se puede leer desde el centro, en forma de zing zang, de abajo para arriba o simplemente no hay un orden.</p>
+                                <div class="avatars-group-sep11">
+                                    <img src="imagenes/de.png" alt="User 1">
+                                    <img src="imagenes/foco.jpg" alt="User 2">
+                                    <img src="imagenes/flores.jpg" alt="User 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer-sep11">
+                        <p>© 2026 Salomé Editions • Bitácora 11 de Septiembre</p>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- DETALLE VIERNES 18 (SEPTIEMBRE) -->
+            <section id="detalle-sep-18" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header header-sep18">
+                    <span class="tag-sep18">Viernes 18 de Septiembre</span>
+                    <h2>¿Qué es la Comunicación Visual?</h2>
+                    <p class="subtitle">La Comunicación Visual consiste en la forma de comunicar o informar un mensajes sin la necesidad de palabras. Esos mensajes se pueden comunicar por medio de colores, imagenes, iconos, textura entre otros.</p>
+                </header>
+
+                <div class="bloque-sep18-wrapper">
+                    <div class="hero-bento-sep18">
+                        <div class="hero-text-sep18">
+                            <span class="badge-pill bg-periwinkle text-white">CREATIVE DESIGN</span>
+                            <h1>Los elementos de la comunicación visual</h1>
+                            <p>Dentro de la comunicación visual se pueden incluir distintos elementos para la conformación del mensaje. Estos ayuda para complemetar una idea o un mensaje para mejor claridad.</p>
+                        </div>
+                        <div class="hero-avatar-frame">
+                            <img src="imagenes/grafica.png" alt="Avatar creativo" class="img-avatar-sep18">
+                        </div>
+                    </div>
+
+                    <div class="grid-dos-columnas static-pos">
+                        <div class="columna-sep18">
+                            <div class="card-sep18 bg-ghost-white">
+                                <div class="card-head-sep18">
+                                    <span class="icon-star">✦</span>
+                                    <h3>Estrategias comunes para la comunicación visual</h3>
+                                </div>
+                                <p>Este tipo de estrategias ayuda a una mejor implementación para trasmitir el mensaje, estas buscan implementar de una manera mas funcional el mensaje.</p>
+                                <div class="pills-row-sep18">
+                                    <span class="pill-soft">visualización de datos.</span>
+                                    <span class="pill-soft">Storytelling.</span>
+                                    <span class="pill-soft">paletas de color.</span>
+                                    <span class="pill-soft">Simbolos y iconos</span>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>La Teoría de la Gestalt</h3>
+                                    <span class="dots-y2k">•••</span>
+                                </div>
+                                <p class="small-text">Sistemas de tarjetas con esquinas orgánicas suaves (24px+).</p>
+                                <div class="caja-img-mediana-sep18">
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-peach-fuzz">
+                                <p class="quote-sep18">"La paleta suave retiene la atención sin fatigar la vista, permitiendo que la información clave destaque con ligereza."</p>
+                            </div>
+                        </div>
+
+                        <div class="columna-sep18">
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Objeto</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/objeto.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Linea</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/linea.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Textura</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/textura.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Espacio</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/espacio.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Color</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/color.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Forma</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/formas.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-soft-periwinkle text-white">
+                                <div class="card-head-sep18">
+                                    <h3>Tipografia</h3>
+                                    <span class="icon-star">✦</span>
+                                </div>
+                                <div class="mini-profile-row">
+                                    <div class="mini-thumb-frame">
+                                        <img src="imagenes/tipografia.png" alt="Miniatura" class="img-fit">
+                                    </div>
+                                    <p class="text-mini">La combinación entre tonos cálidos y fríos crea el balance perfecto entre modernidad y cercanía.</p>
+                                </div>
+                            </div>
+
+                            <div class="card-sep18 bg-antique-white">
+                                <div class="card-head-sep18">
+                                    <h3>Puntos a Considerar</h3>
+                                    <span class="dots-y2k">•••</span>
+                                </div>
+                                <ul class="lista-puntos-sep18">
+                                    <li><strong>Contraste armónico:</strong> Usar tipografía en tonos lavanda oscuros sobre fondos claros.</li>
+                                    <li><strong>Esquinas redondeadas:</strong> Mantener bordes entre 18px y 28px para un toque *soft*.</li>
+                                    <li><strong>Espaciado modular:</strong> Margen interno uniforme para mantener ligereza visual.</li>
+                                </ul>
+                                
+                                <div class="thumbs-grid-sep18">
+                                    <div class="thumb-box"><img src="imagenes/thumb1-sep18.jpg" alt="Thumb 1"></div>
+                                    <div class="thumb-box"><img src="imagenes/thumb2-sep18.jpg" alt="Thumb 2"></div>
+                                    <div class="thumb-box"><img src="imagenes/thumb3-sep18.jpg" alt="Thumb 3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer-sep18">
+                        <p>✦ Bitácora de Diseño • 18 de Septiembre ✦</p>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- DETALLE VIERNES 25 (SEPTIEMBRE) -->
+            <section id="detalle-sep-25" class="showcase-container theme-gravity showcase-content hidden">
+                <div class="gravity-hero">
+                    <h1 class="glitch-title">VIERNES 25 DE SEPTIEMBRE</h1>
+                    <p class="date-badge">CIERRE DE MES</p>
+                </div>
+                <div class="editorial-layout">
+                    <article class="editorial-box highlight">
+                        <h2>Resultados Finales de Septiembre</h2>
+                        <p>Conclusiones, revisiones y resumen general del mes.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- DETALLES PARA OCTUBRE -->
+
+            <!-- DETALLE VIERNES 09 (OCTUBRE) -->
+            <section id="detalle-oct-09" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header">
+                    <span class="tag">Viernes 09 de Octubre</span>
+                    <h2>Segunda Semana de Octubre</h2>
+                    <p class="subtitle">Avances y desarrollo visual.</p>
+                </header>
+                <div class="block-row">
+                    <div class="block-text">
+                        <h3>Revisiones y avances</h3>
+                        <p>Contenido, notas y avances programados para este día.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DETALLE VIERNES 16 (OCTUBRE) -->
+            <section id="detalle-oct-16" class="showcase-container theme-gigantic showcase-content hidden">
+                <header class="showcase-header">
+                    <span class="tag">Viernes 16 de Octubre</span>
+                    <h2>Tercera Semana de Octubre</h2>
+                    <p class="subtitle">Seguimiento de bitácora.</p>
+                </header>
+                <div class="block-row">
+                    <div class="block-text">
+                        <h3>Investigación y desarrollo</h3>
+                        <p>Contenido, notas y desarrollo del proyecto.</p>
+                    </div>
+                </div>
+            </section>
+
+           <!-- DETALLE VIERNES 23 (OCTUBRE) - ESTRUCTURA SHOWCASE Y COMPARATIVA -->
+<section id="detalle-oct-23" class="showcase-container theme-gigantic showcase-content hidden">
+    
+    <!-- ENCABEZADO DE LA FECHA -->
+    <header class="showcase-header">
+        <span class="tag">Viernes 23 de Octubre</span>
+        <h2>Tipologías Infográficas: Periodística vs. Estadística</h2>
+        <p class="subtitle">Análisis comparativo, jerarquía visual y paletas de color aplicadas a la bitácora.</p>
+    </header>
+
+    <!-- RESUMEN GENERAL -->
+    <div class="block-row">
+        <div class="block-text">
+            <h3>Breve Resumen del Tema</h3>
+            <p>
+                Las infografías se dividen según su enfoque funcional. Por un lado, la <strong>infografía periodística</strong> busca sintetizar acontecimientos y noticias con un estilo claro, rápido y de fácil lectura. Por otro lado, la <strong>infografía estadística</strong> transforma grandes volúmenes de datos numéricos y porcentajes en representaciones gráficas estructuradas sin perder precisión.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARTA COMPARATIVA DE 2 COLUMNAS (PERIÓDICA vs ESTADÍSTICA) -->
+    <div class="bitacora-columns-wrapper">
+        
+        <!-- COLUMNA 1: INFOGRAFÍA PERIODÍSTICA -->
+        <article class="bitacora-card journalism-card">
+            <div class="bitacora-card-header">
+                <h3>Infografía Periodística</h3>
+            </div>
+            <div class="bitacora-card-body">
+                <div class="info-block">
+                    <h4>1. Definición y Propósito</h4>
+                    <p>Es un recurso gráfico que sintetiza acontecimientos o noticias actuales de forma clara, directa y entretenida[cite: 20]. Aporta valor informativo autosuficiente para comprender un suceso sin leer extensos cuerpos de texto[cite: 20].</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>2. Características Clave</h4>
+                    <ul>
+                        <li><strong>Eficacia Informativa:</strong> Transmite sucesos clave combinando tipografía clara, ilustraciones e iconos[cite: 20].</li>
+                        <li><strong>Claridad y Jerarquía:</strong> Elimina distracciones innecesarias y organiza la lectura guiando la mirada desde los titulares hasta los detalles[cite: 20].</li>
+                        <li><strong>Atractivo Visual y Fuentes:</strong> Mantiene una identidad gráfica propia e incluye citas y créditos visibles[cite: 20].</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>3. Historia en El Salvador</h4>
+                    <p>Se introdujo entre 1991 y 1993 en medios como <em>El Diario de Hoy</em> y <em>La Prensa Gráfica</em> a raíz de sucesos como la Guerra del Golfo Pérsico[cite: 20], evolucionando de diagramas hechos a mano hasta infografías investigativas premiadas internacionalmente[cite: 20].</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>4. Clasificación Principal</h4>
+                    <ul>
+                        <li><strong>Sencilla:</strong> Gráficos inmediatos como barras y tablas[cite: 20].</li>
+                        <li><strong>Diaria:</strong> Conceptualización rápida de hechos noticiosos del día[cite: 20].</li>
+                        <li><strong>Investigativa:</strong> Desarrollo profundo con entrevistas y análisis visual extenso[cite: 20].</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- COLUMNA 2: INFOGRAFÍA ESTADÍSTICA -->
+        <article class="bitacora-card statistics-card">
+            <div class="bitacora-card-header">
+                <h3>Infografía Estadística</h3>
+            </div>
+            <div class="bitacora-card-body">
+                <div class="info-block">
+                    <h4>1. Definición y Propósito</h4>
+                    <p>Recurso visual diseñado para transformar datos numéricos complejos (porcentajes, presupuestos, mediciones) en historias visuales atractivas sin alterar la veracidad ni eliminar precisión[cite: 2, 3].</p>
+                </div>
+
+                <div class="info-block">
+                    <h4>2. Organización Estructural</h4>
+                    <ul>
+                        <li><strong>Módulos o Bloques:</strong> División en secciones o tablas para agrupar datos afines[cite: 4].</li>
+                        <li><strong>Jerarquía de Cifras:</strong> Destaca el dato principal mediante tamaño o color sobre los datos secundarios[cite: 4].</li>
+                        <li><strong>Orden de Lectura:</strong> Flujo natural guiado de izquierda a derecha y de arriba a abajo[cite: 4].</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>3. Gráficos Visuales</h4>
+                    <div class="tag-badges">
+                        <span class="badge-item"><strong>Barras:</strong> Comparación de cantidades[cite: 6]</span>
+                        <span class="badge-item"><strong>Líneas:</strong> Tendencias en el tiempo[cite: 6]</span>
+                        <span class="badge-item"><strong>Dona / Pastel:</strong> Partes de un todo o porcentajes[cite: 6]</span>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <h4>4. Puntos de Diseño</h4>
+                    <ul>
+                        <li>Uso exclusivo de fuentes confiables y verificadas[cite: 6, 18].</li>
+                        <li>Redacción sintética apoyada con simbología e iconografía directa[cite: 6].</li>
+                        <li>Adaptación del lenguaje gráfico según el público objetivo[cite: 18].</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+            <!-- DETALLE VIERNES 30 (OCTUBRE) -->
+            <section id="detalle-oct-30" class="showcase-container theme-gravity showcase-content hidden">
+                <div class="gravity-hero">
+                    <h1 class="glitch-title">VIERNES 30 DE OCTUBRE</h1>
+                    <p class="date-badge">CIERRE DEL MES DE OCTUBRE</p>
+                </div>
+                <div class="editorial-layout">
+                    <article class="editorial-box highlight">
+                        <h2>Resultados Finales de Octubre</h2>
+                        <p>Conclusiones, revisiones finales y resumen general del mes.</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- 3. LÓGICA JAVASCRIPT -->
+    <script>
+        let detalleActivoId = null;
+
+        function mostrarDetalle(idSeccion, elementoBoton) {
+            const controles = document.getElementById('panel-controls');
+            const secciones = document.querySelectorAll('.showcase-content');
+            const botones = document.querySelectorAll('.day-badge');
+
+            // Si se hace clic en el botón de la fecha que ya está abierta -> Se oculta
+            if (detalleActivoId === idSeccion) {
+                ocultarDetalles();
+                return;
+            }
+
+            // Ocultar todas las secciones
+            secciones.forEach(sec => sec.classList.add('hidden'));
+            botones.forEach(btn => btn.classList.remove('active'));
+
+            // Mostrar la sección seleccionada y activar botón
+            const seccionAMostrar = document.getElementById(idSeccion);
+            if (seccionAMostrar) {
+                seccionAMostrar.classList.remove('hidden');
+                controles.classList.remove('hidden');
+                elementoBoton.classList.add('active');
+                detalleActivoId = idSeccion;
+
+                // Desplazamiento suave a la información
+                seccionAMostrar.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function ocultarDetalles() {
+            const controles = document.getElementById('panel-controls');
+            const secciones = document.querySelectorAll('.showcase-content');
+            const botones = document.querySelectorAll('.day-badge');
+
+            secciones.forEach(sec => sec.classList.add('hidden'));
+            botones.forEach(btn => btn.classList.remove('active'));
+            controles.classList.add('hidden');
+            detalleActivoId = null;
+        }
+    </script>
+
+</body>
+</html>
